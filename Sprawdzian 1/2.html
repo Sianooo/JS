@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="pl">
+<body>
+    <script>
+        let liczba = prompt("Podaj liczbe"), 
+        suma = 0;
+        for (let i = 1; i <= liczba / 2; i++)
+        { if (liczba % i === 0)
+            {
+             suma += i * i;
+            }
+        if (suma == liczba)
+        {
+        document.write(`${liczba} jest doskonaea drugiego rzedu.`);
+        }
+        else{ 
+        document.write(`${liczba} nie jest doskonala drugiego rzedu.`);
+        }
+        }
+    </script>
+</body>
+</html>
