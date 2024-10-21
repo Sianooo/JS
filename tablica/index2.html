@@ -7,23 +7,26 @@
 </head>
 <body>
     <script>
-    var produkty = new Array()
-    produkty['Chleb']=2
-    produkty['Maslo']=3
-    produkty['Pomidor']=5
-    produkty['Papryka']=6
-    produkty['Kawa']=15
-
-    let tablica = new Array(20);
-    for (let i = 0; i < 20; i++) {
-        let rand = Math.floor(Math.random() * 5); 
-        tablica[i] = rand;
+    
+    let produkty= new Array()
+    produkty["ciastko"] = 3;
+    produkty["ser"] = 5.32;
+    produkty["mleko"] = 7;
+    produkty["piernik"] = 2.27;
+    produkty["chleb"] = 4; 
+    
+    let ilosci=new Array()
+    for(let i=0;i<5;i++){
+        ilosci[i]=Math.floor(Math.random()*19+1)
     }
-
-    tablica.forEach((el, index) => {
-        let key = Object.keys(produkty)[el];
-        document.write(`wartosc produktu ${key} to ${Math.floor(Math.random() * 19 + 1)} zl<br>`);
-    });
+    let suma=0;
+    let wynik=0
+    for(let key in produkty){
+        document.write(`${key} kosztuje: ${produkty[key]}zl||cena za ${ilosci[wynik]}kosztuje : ${(produkty[key]*ilosci[wynik].toFixed(2))} zl <br>`)
+        suma=suma+(produkty[key]*ilosci[wynik])
+        wynik++
+    }
+    document.write(`Cena za cale zakupy wynosi : ${suma.toFixed(2)}`)
     </script>
 </body>
 </html>
