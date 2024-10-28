@@ -28,7 +28,36 @@
         //     default:
         //         document.write(`nie ma takeigo wyboru`)
         // }
-        
+
+        // function potega(a,b){
+        //     c=a
+        //     for(let i=1;i<b;i++){
+        //         c=c*a
+        //     }
+        //     return c
+        // }
+
+        // let liczba=parseFloat(prompt("Podaj liczbe kotra chcesz spotegowac"))
+        // let spotegowanie=parseFloat(prompt("1.do 2,2.do 3"))
+        // switch(spotegowanie){
+        //     case 1:
+        //         if(isNaN(liczba)){
+        //             document.write("to nie jest liczba ")
+        //         }else{
+        //             document.write(`Potega z liczby ${liczba} do 2 wynosi :${potega(liczba,2)}`)
+        //         }
+        //     break
+        //     case 2:
+        //         if(isNaN(liczba)){
+        //             document.write("to nie jest liczba ")
+        //         }else{
+        //             document.write(`Potega z liczby ${liczba} do 3 wynosi :${potega(liczba,3)}`)
+        //         }
+        //     break  
+        //     default:
+        //         document.write("Nie ma takiej potegi")
+        //         break
+        // }
         
         // let napis="Ala ma kota kot ma ale"
         // let colors1=["red","yellow","orange","pink","green"]
@@ -38,6 +67,14 @@
         // }
         // document.write("</br>")
 
+        let napis = "Ala ma kota kot ma ale"
+        let colors=["red","yellow","orange","pink","green"]
+        for(let i=0;i<napis.length;i++){
+            let losowyKolor=colors[Math.floor(Math.random()* colors.length)]
+            napis[i]=losowyKolor
+            document.write(napis[i].fontcolor(losowyKolor))
+        }
+
         // for(let i=0;i<napis.length;i++){
         //     if(i%2==0){
         //         document.write(`${napis[i].sup()}`)
@@ -46,9 +83,9 @@
         //     }
         // }
         // document.write("</br>")
-        // let napis=prompt("Podaj zdanie ")
-        // let usuwanieRzeczy=napis.replaceAll(" ","").replaceAll(".","").toUpperCase()
-        // document.write(`${usuwanieRzeczy} <br>`)
+        // let napis1=prompt("Podaj zdanie ")
+        // let usuwanieRzeczy=napis1.replaceAll(" ","").replaceAll(".","").toUpperCase()
+        // document.write(usuwanieRzeczy)
 
         // let size=1;
         // let dir=1;
@@ -60,13 +97,24 @@
         //     }
         // }
 
-
+        // document.write("<br>")
         // let tab= new Array(20)
         // for(let i=0;i<tab.length;i++){
-        //     let randNumber=Math.floor(Math.random() * 99+1)
-        //     tab[i]=randNumber
-        //     document.write(`${tab[i]} ,`)
+        //     tab[i]=Math.floor(Math.random() * 99+1)
+        //     document.write(tab[i]+",")
         // }
+
+        // let findNumber=parseInt(prompt("Podaj liczbe do wyszukania"))
+        // let index=tab.indexOf(findNumber)
+        // if(!isNaN(findNumber)){
+        // if(tab.includes(findNumber)){
+        //     document.write(`${findNumber} znajduje sie w tablicy`)
+        // }else{
+        //     document.write(`${findNumber} nie znajduje sie w tablicy`)
+        // }
+        // }else{
+        //     document.write("To nie jest liczba prosze podac liczbe ")
+        // }   
 
 
         // tab.reverse()
@@ -77,6 +125,7 @@
         // }
         // tab.sort(sortTab)
         // document.write(`${tab} sortowanie <br>`)
+
 
 
         // let findNumber=parseInt(prompt("Podaj liczbe do wyszukania"))
@@ -93,74 +142,74 @@
         // tab3=tab.splice(2,4)
         // document.write(`${tab3}zmodyfikowana taablica <br>`)
         // document.write(`${tab} <br>`)
-        // tab.push([333,444,555])
+        // tab.push(333,444,555)
         // document.write(`${tab} tablica z dodaniem na koniec <br>`)
         // document.write(`<br> Rozmiar tablicy :${tab.length}`)
 
         // let a = tab.join(","); // Łączy elementy tablicy w jeden ciąg znaków
         // document.write(`<br> Łączy elementy tablicy: ${a}`);
 
-    let produkty= new Array()
-    produkty["ciastko"] = 3;
-    produkty["ser"] = 5.32;
-    produkty["mleko"] = 7;
-    produkty["piernik"] = 2.27;
-    produkty["chleb"] = 4; 
+    // let produkty= new Array()
+    // produkty["ciastko"] = 3;
+    // produkty["ser"] = 5.32;
+    // produkty["mleko"] = 7;
+    // produkty["piernik"] = 2.27;
+    // produkty["chleb"] = 4; 
     
-    let ilosci=new Array()
-    for(let i=0;i<5;i++){
-        ilosci[i]=Math.floor(Math.random()*19+1)
-    }
-    let suma=0;
-    let wynik=0
-    for(let key in produkty){
-        document.write(`${key} kosztuje: ${produkty[key]}zl||cena za ${ilosci[wynik]}kosztuje : ${(produkty[key]*ilosci[wynik].toFixed(2))} zl <br>`)
-        suma=suma+(produkty[key]*ilosci[wynik])
-        wynik++
-    }
-    document.write(`Cena za cale zakupy wynosi : ${suma.toFixed(2)}`)
-    document.write("<br>")
+    // let ilosci=new Array()
+    // for(let i=0;i<5;i++){
+    //     ilosci[i]=Math.floor(Math.random()*19+1)
+    // }
+    // let suma=0;
+    // let wynik=0
+    // for(let key in produkty){
+    //     document.write(`${key} kosztuje: ${produkty[key]}zl||cena za ${ilosci[wynik]}kosztuje : ${(produkty[key]*ilosci[wynik].toFixed(2))} zl <br>`)
+    //     suma=suma+(produkty[key]*ilosci[wynik])
+    //     wynik++
+    // }
+    // document.write(`Cena za cale zakupy wynosi : ${suma.toFixed(2)}`)
+    // document.write("<br>")
 
-    let napis = "Ala ma kota kot ma ale "
-    let colors=["red","orange","pink","green","purple"]
-    for(let i=0;i<napis.length;i++){
-        let losColor=colors[(Math.floor(Math.random()*colors.length))]
-        napis[i]=losColor
-        document.write(`${napis[i].fontcolor(losColor)}`)
-    }
-    document.write("<br>")
-    let tab=new Array(20)
-    for(let i=0;i<tab.length;i++){
-        tab[i]=Math.floor(Math.random()*99+1)
-        document.write(tab[i]+",")
-    }
+    // let napis = "Ala ma kota kot ma ale "
+    // let colors=["red","orange","pink","green","purple"]
+    // for(let i=0;i<napis.length;i++){
+    //     let losColor=colors[(Math.floor(Math.random()*colors.length))]
+    //     napis[i]=losColor
+    //     document.write(`${napis[i].fontcolor(losColor)}`)
+    // }
+    // document.write("<br>")
+    // let tab=new Array(20)
+    // for(let i=0;i<tab.length;i++){
+    //     tab[i]=Math.floor(Math.random()*99+1)
+    //     document.write(tab[i]+",")
+    // }
 
-    function sortTab(a,b){
-        return a-b
-    }
-    document.write("<br>")
-    tab.reverse()
-    document.write("Odwrocona tablica :"+ tab)
-    document.write("<br>")
-    tab.sort(sortTab)
-    document.write(`Posortowana Tablica: ${tab}`)
-    document.write("<br>")
-    let tab2=tab.slice(4,5)
-    document.write(`Usunieta tablica: ${tab2}`)
-    document.write("<br>")
-    let tab3=tab.splice(1,6)
-    document.write(`Ucieta tablica : ${tab3}`)
-    document.write("<br>")
-    tab.push([333,444,555])
-    document.write(`Dodawanie elementow na koniec :${tab}`)
-    document.write("<br>")
-    for(let i=0;i<napis.length;i++){
-        if(i%2==0){
-            document.write(`${napis[i].sup()}`)
-        }else{
-            document.write(`${napis[i].sub()}`)
-        }
-    }
+    // function sortTab(a,b){
+    //     return a-b
+    // }
+    // document.write("<br>")
+    // tab.reverse()
+    // document.write("Odwrocona tablica :"+ tab)
+    // document.write("<br>")
+    // tab.sort(sortTab)
+    // document.write(`Posortowana Tablica: ${tab}`)
+    // document.write("<br>")
+    // let tab2=tab.slice(4,5)
+    // document.write(`Usunieta tablica: ${tab2}`)
+    // document.write("<br>")
+    // let tab3=tab.splice(1,6)
+    // document.write(`Ucieta tablica : ${tab3}`)
+    // document.write("<br>")
+    // tab.push([333,444,555])
+    // document.write(`Dodawanie elementow na koniec :${tab}`)
+    // document.write("<br>")
+    // for(let i=0;i<napis.length;i++){
+    //     if(i%2==0){
+    //         document.write(`${napis[i].sup()}`)
+    //     }else{
+    //         document.write(`${napis[i].sub()}`)
+    //     }
+    // }
     // let znajdzLiczbe=parseInt(prompt("Podaj liczbe do znalezienia"))
     // let index=tab.indexOf(znajdzLiczbe)
     // if(tab.includes(znajdzLiczbe)){
@@ -174,17 +223,17 @@
     // document.write(`Pierwiastek liczb ${liczba1} i ${liczba2} wynosi = ${Math.pow(liczba1,liczba2)}`)
     // document.write(`${liczba1} i ${liczba2} wynosi ${Math.round(liczba1,liczba2)}`)
 
-    let napis2="Ala ma kota kot ma ale"
-    let color=new Array(4)
-    color[0]="red"
-    color[1]="pink"
-    color[2]="blue"
-    color[3]="orange"
-    for(let i=0;i<napis.length;i++){
-        let randomColor=color[Math.floor(Math.random()*color.length)]
-        napis[i]=randomColor
-        document.write(`${napis[i].fontcolor(randomColor)}`)
-    }
+    // let napis2="Ala ma kota kot ma ale"
+    // let color=new Array(4)
+    // color[0]="red"
+    // color[1]="pink"
+    // color[2]="blue"
+    // color[3]="orange"
+    // for(let i=0;i<napis.length;i++){
+    //     let randomColor=color[Math.floor(Math.random()*color.length)]
+    //     napis[i]=randomColor
+    //     document.write(`${napis[i].fontcolor(randomColor)}`)
+    // }
     </script>
     
 </body>
