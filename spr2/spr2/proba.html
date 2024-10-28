@@ -1,0 +1,170 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+<script>
+//1. wylosuj liczbe calkowitą z przedzialu od 10 do 28 potraktuj ją jako rozmiar tablicy ktora wypelniamy liczbami losowymi 
+//  calkowitymi  z przedzialu od 1 do 9
+// pokaz otrzymana tablice do tablicy dolaczyc liczby 22 33 wyznaczyc sume wszytskich elementow tablicy nastepnie wyznacz pierwiastek 
+// z otrzymanej liczbyi zaokraglij do 2 miejsc po przecinku
+
+
+
+// let liczba=Math.floor(Math.random()* 16)+15
+// let tab=new Array(liczba)
+// for(let i=0;i<liczba;i++){
+//     tab[i]=Math.floor(Math.random()*11)+5
+//     document.write(tab[i]+",")
+// }
+// document.write("<br>")
+// tab.push(44,55)
+// document.write(tab)
+// document.write("<br>")
+// let iloczyn=1
+// for(let i=0;i<tab.length;i++){
+//     iloczyn*=tab[i]
+//     document.write(iloczyn)
+// }
+// document.write("<br>")
+// iloczyn=potega(iloczyn,3)
+// document.write(iloczyn)
+// iloczyn=iloczyn.toFixed(3)
+// document.write("<br>")
+// document.write(iloczyn)
+
+
+
+// let liczba=Math.floor(Math.random()*19)+10
+// let tab=new Array(liczba)
+// for(let i=0;i<liczba;i++){
+//     tab[i]=Math.floor(Math.random()*10)+1
+//     document.write(tab[i]+", ")
+// }
+// document.write("<br>")
+// tab.push(22,33)
+// let s=0
+// for(let i=0;i<tab.length;i++){
+//     s+=tab[i]
+// }
+// document.write("<br>"+"tablica: "+ tab);
+// document.write("<br>"+"sumowanie w tablicy :"+ s);
+// s = Math.sqrt(s);
+// s = s.toFixed(2);
+// document.write("<br>"+"Cos "+ s);
+
+
+// 2. pobierz ciag znakow od uzytkownika (zdanie) pobrane zdanie wypisz w nastepujacy
+//  sposob pierwszy i osttni znag mozliwie najwieksza czcionkka\ koloru czerwonego
+// pozostale znaki mozliwe najmniejszą czcionką koloru zielonego a wszystkie cyfry jako index górny
+
+// let zdanie = prompt("Podaj zdanie");
+// for(let i=0;i<zdanie.length;i++){
+//     if(i===0||i===zdanie.length-1){
+//         document.write(zdanie[i].fontcolor("blue").fontsize(7))
+//     }else if(zdanie[i]==='!'||zdanie[i]==='@'||zdanie[i]=='#'){
+//         document.write(zdanie[i].fontcolor("orange").sub())
+//     }else{
+//         document.write(zdanie[i].fontcolor("orange").fontsize(1))
+//     }
+// }
+
+
+
+
+// let zdanie = prompt("Podaj zdanie");
+// for (let i = 0; i < zdanie.length; i++) {
+//     if (i === 0 || i === zdanie.length - 1) {
+//         document.write(zdanie[i].fontcolor("red").fontsize("5")); // Największa czcionka i kolor czerwony
+//     } else {
+//         if (!isNaN(zdanie[i])) { // Sprawdzenie, czy znak jest cyfrą
+//             document.write(zdanie[i].fontcolor("green").sup()); // Cyfry jako indeks górny
+//         } else {
+//             document.write(zdanie[i].fontcolor("green").fontsize("1")); // Najmniejsza czcionka i kolor zielony
+//         }
+//     }
+// }
+
+// // 3. pobeirz 2 wartosci od uzytkownika i jezeli sa one liczbami to wyznacz z nich wartosc
+//  bezwzgeldną nastepnie pierwsza zaokraglij w dol a druga w góre
+// // i wyznacz potege pierwszej do drugiej jezeli to nie liczby daj komunikat tablice 20 elementowa 
+// wypelnic tak aby na pierwzsej pozycji byla wyznaczona potega
+// // a kazdy nastepny element byl o 10 mnijeszy niz wczesniejszy pokaz tablice zrob z tablicy 
+// stringa jako seperator uzyj przecinka wypisz stringa
+// // z stringa wyrzuc wszytskie 1  , zmienic na : i 6 kolorem zoltym;
+
+
+
+// let a=prompt("Podaj liczbe")
+// let b=prompt("Podaj liczbe2")
+// if(isNaN(a)||isNaN(b)){
+//     document.write("To nie sa liczby")
+// }else{
+//     document.write(`Pobrane liczby ${a} i ${b} <br>`)
+//     a=Math.abs(a)
+//     b=Math.abs(b)
+//     document.write(`Wartosc bezwzgledna ${a} i ${b} <br>`)
+//     a=Math.floor(a)
+//     b=Math.ceil(b)
+//     document.write(`Zaokraglone liczby ${a} i ${b} <br>`)
+//     let c=Math.pow(a,b)
+//     document.write(`Potega z ${a} i ${b} wynosi ${c} <br>`)
+//     let tab=new Array(20)
+//     for(let i=0;i<20;i++){
+//         tab[i]=c;
+//         c-=10
+//     }
+//     document.write(`Tablica wywolana z tablicy ${tab} <br>`)
+//     let stirng=tab.join(",")
+//     document.write(`Tablica z stringa ${stirng} <br>`)
+//     for(let i=0;i<stirng.length;i++){
+//         stirng=stirng.replaceAll(",",":")
+//         stirng=stirng.replaceAll("1","")
+//     }
+//     document.write("<br> zmieniony string: "+stirng);
+//     document.write("<br> zolte 6 w stringu: ");
+//     for(let i=0;i<stirng.length;i++){
+//         if(stirng[i]==='6'){
+//             document.write(stirng[i].fontcolor("yellow"));
+//         }else{
+//             document.write(stirng[i]);
+//         }
+//        }
+    
+// }
+
+// let a =parseFloat(prompt("Podaj liczbe"))
+// let b =parseFloat(prompt("Podaj liczbe2"))
+// if(isNaN(a)||isNaN(b)){
+//     document.write("To nie sa liczby ")
+// }else{
+//     document.write("Pobrane liczby "+a+" i "+b+"<br>")
+//     a=Math.floor(a)
+//     b=parseFloat(b.toFixed(2))
+//     let roznica=(b-a)
+//     document.write(`Roznca liczb ${a} i ${b} = ${roznica}<br>`)
+//     let roznica2=Math.pow(roznica,2)
+//     document.write(`Potega z roznicy ${a} i ${b} = ${roznica2}<br>`)
+//     let tab = new Array(20)
+//     for(let i=0;i<20;i++){
+//         tab[i]=roznica2
+//         roznica2-=5
+//     }
+//     document.write(`Tablica wywolana z tablicy ${tab}<br>`)
+//     let string=tab.join(";")
+//     document.write(`Tablica ze stringiem ${string}`)
+//     for(let i=0;i<string.length;i++){
+//         string=string.replaceAll("3","")
+//         .replaceAll("7",";")
+//         .replaceAll("9", '<font color="blue">9</font>')
+//     }
+// }
+
+
+</script>
+</body>
+</html>

@@ -1,0 +1,10 @@
+1. wylosuj liczbe calkowitą z przedzialu od 10 do 28 potraktuj ją jako rozmiar tablicy ktora wypelniamy liczbami losowymi calkowitymi  z przedzialu od 1 do 9
+pokaz otrzymana tablice do tablicy dolaczyc liczby 22 33 wyznaczyc sume wszytskich elementow tablicy nastepnie wyznacz pierwiastek z otrzymanej liczbyi zaokraglij do 2 miejsc po przecinku
+
+2. pobierz ciag znakow od uzytkownika (zdanie) pobrane zdanie wypisz w nastepujacy sposob pierwszy i osttni znag mozliwie najwieksza czcionkka koloru czerwonego
+pozostale znaki mozliwe najmniejszą czcionką koloru zielonego a wszystkie cyfry jako index górny
+
+3. pobeirz 2 wartosci od uzytkownika i jezeli sa one liczbami to wyznacz z nich wartosc bezwzgeldną nastepnie pierwsza zaokraglij w dol a druga w góre
+i wyznacz potege pierwszej do drugiej jezeli to nie liczby daj komunikat tablice 20 elementowa wypelnic tak aby na pierwzsej pozycji byla wyznaczona potega
+a kazdy nastepny element byl o 10 mnijeszy niz wczesniejszy pokaz tablice zrob z tablicy stringa jako seperator uzyj przecinka wypisz stringa
+z stringa wyrzuc wszytskie 1  , zmienic na : i 6 kolorem zoltym;
