@@ -1,0 +1,204 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+    // let ala = 5;  // Ala zaczyna z 5 zł
+    // let basia = 5;  // Basia zaczyna z 5 zł
+    // let wzrost = 0.03;  // Wzrost o 3%
+    // let dzien = parseInt(prompt("Podaj liczbę dni:"));
+
+    // // Zmienna do śledzenia całkowitej sumy oszczędności
+    // let sumaOszczednosciAla = ala;
+    // let sumaOszczednosciBasia = basia;
+
+    // for (let i = 0; i <= dzien; i++) {
+    //     if (i === 0) {
+    //         // Pierwszego dnia pokazujemy startową kwotę
+    //         document.write(`Ala i Basia mają po ${ala} zł<br>`);
+    //     } else {
+    //         if (i % 2 === 0) {  // Parzyste dni - wzrost dla Ali
+    //             ala += ala * wzrost;
+    //             sumaOszczednosciAla += ala;  // Sumujemy oszczędności Ali
+    //         } else {  // Nieparzyste dni - wzrost dla Basi
+    //             basia += basia * wzrost;
+    //             sumaOszczednosciBasia += basia;  // Sumujemy oszczędności Basi
+    //         }
+
+    //         document.write(`Dzień ${i}: Ala ma ${ala.toFixed(2)} zł, Basia ma ${basia.toFixed(2)} zł<br>`);
+    //     }
+    // }
+
+    // // Wyświetlamy końcową sumę oszczędności
+    // document.write(`<br><b>Suma oszczędności Ali na koniec: ${sumaOszczednosciAla.toFixed(2)} zł</b>`);
+    // document.write(`<br><b>Suma oszczędności Basi na koniec: ${sumaOszczednosciBasia.toFixed(2)} zł</b>`);
+
+    // let liczba = parseInt(prompt("Podaj liczbę"));  // Wczytanie liczby od użytkownika
+    // let sumaKwadratow = 0;  // Inicjalizacja sumy kwadratów
+
+    // // Iteracja przez wszystkie liczby od 1 do (liczba - 1)
+    // for (let i = 1; i < liczba; i++) {
+    //     if (liczba % i === 0) {  // Sprawdzenie, czy i jest dzielnikiem liczby
+    //         sumaKwadratow += i * i;  // Dodanie kwadratu dzielnika do sumy
+    //     }
+    // }
+
+    // // Sprawdzenie, czy suma kwadratów dzielników jest równa kwadratowi liczby
+    // if (sumaKwadratow === liczba * liczba) {
+    //     document.write(`${liczba} jest liczbą doskonałą drugiego rzędu.`);
+    // } else {
+    //     document.write(`${liczba} nie jest liczbą doskonałą drugiego rzędu.`);
+//     // }
+
+//     let a = parseInt(prompt("Podaj do ilu ma być liczba:"));
+
+// for (let i = 1; i <= a; i++) {
+//     let kwadrat = false;
+//     for (let j = 1; j * j <= i; j++) {
+//         if (j * j === i) {
+//             kwadrat = true;
+//         }
+//     }
+//     if (kwadrat) {
+//         document.write("<b>" + i + "</b> ");
+//     } else {
+//         document.write(i + " ");
+//     }
+// }
+
+        // let bok1= parseInt(prompt("Podaj liczbe:"));
+        // let bok2= parseInt(prompt("Podaj liczbe2:"));
+        // let zadanie=parseFloat(prompt("1.pole, 2.obwod"))
+        // switch(zadanie){
+        //     case 1:
+        //         if(bok1>0&&bok2>0){
+        //             document.write(`Pole prostokatu wynoisi : ${bok1*bok2}`);
+        //         }else{
+        //             document.write("Liczba nie moze byc ujemna")
+        //         }
+        //         break
+        //     case 2:
+        //         if(bok1>0&&bok2>0){
+        //             document.write(`Obwod prostokatu wynosi : ${2*(bok1+bok2)}`);
+        //         }else{
+        //             document.write("Liczba nie moze byc ujemna")
+        //         }
+        //         break
+        //     default:
+        //         document.write("Podano niepoprawne dane")
+        //         break
+        // }
+
+        // zad 1
+        // wykonac zestawienie kwot otrzymanych przez ale w ciagu d dni(d podaje uzytkownik) jezeli kwota
+        //  z 1 dnia wynosi 3 zl a kazdego jest o 2 zl wieksza niz w dniu poprzednim 
+
+        // let dzien=parseInt(prompt("Podaj ilosc dni:"));
+        // let kwota=3;
+        // for(let i=1;i<=dzien;i++){
+        //     if(i===1){
+        //         document.write(`Ala ma ${i} dnia ${kwota} zł`);
+        //     }
+        //     if(i>1){
+        //         kwota+=2;
+        //         document.write(`<br>Dzień ${i}: Ala ma ${kwota} zł`);
+        //     }
+
+        // }
+
+
+        //zad 2 
+        // wypisac wszystkie liczby naturalne od 1 do n(n podaje uzytkownik) pogrubic
+        // tte ktore sa kwadratami liczb naturalnych i obliczyc sume pogrubionych 
+
+        // let liczba = parseInt(prompt("Podaj liczbe:"));
+        // let suma = 0;
+
+        // for (let i = 1; i < liczba; i++) {
+        //     let kwadrat = false; // Reset for each `i`
+            
+        //     for (let j = 1; j * j <= i; j++) {
+        //         if (j * j === i) {
+        //             suma += i;
+        //             kwadrat = true;
+        //         }
+        //     }
+            
+        //     if (kwadrat) {
+        //         document.write(`<b>${i}</b> `);
+        //     } else {
+        //         document.write(`${i} `); 
+        //     }
+        // }
+
+        // document.write(`<br>Suma kwadratów = ${suma}`);
+
+
+
+
+        // zad 3 
+        // w zaleznosci od wyboru uzytkownika wyznaczyc pole lub obwod kwadratu o boku pobranym 
+        //od uzytkownika i trzeba zadbac zeby bok byl dodatni 
+        
+         let bok = parseInt(prompt("Podaj bok:"));
+         let bok2 = parseInt(prompt("Podaj bok2:"));
+         let zadanie=parseInt(prompt("1.pole, 2.obwod"))
+         if(bok>0&&bok2>0){
+             switch(zadanie){
+                 case 1:
+                     document.write(`Pole kwadratu wynosi : ${bok*bok2}`);
+                     break
+                 case 2:
+                     document.write(`Obwod kwadratu wynosi : ${2*(bok+bok2)}`);
+                     break
+                 default:
+                     document.write("Podano niepoprawne dane")
+                     break
+             }
+         }else{
+             document.write("Liczba nie moze byc ujemna")
+         }
+        
+        // zad 4
+        // pobrac liczbe wypisac wszystkie jej dzielniki włacznie z 1 i nia samą wyznaczyc sume tych dzielników 
+        //i sprawdzic czy ta suma jest parzysta (jak jest parzysta napisac ze parzysta)
+
+        // Pobranie liczby od użytkownika
+        // Pobranie liczby od użytkownika
+        let liczba = parseInt(prompt("Podaj liczbę: "));
+        let sumaDzielnikow = 0;
+
+        // Wypisanie dzielników i obliczenie ich sumy
+        let dzielnikiText = "Dzielniki liczby " + liczba + " to: ";
+
+        for (let i = 1; i <= liczba; i++) {
+            if (liczba % i === 0) {
+                dzielnikiText += i + " ";
+                sumaDzielnikow += i;
+            }
+        }
+
+        console.log(dzielnikiText);
+        console.log("Suma dzielników: " + sumaDzielnikow);
+
+        // Sprawdzenie, czy suma dzielników jest parzysta
+        if (sumaDzielnikow % 2 === 0) {
+            console.log("Suma dzielników jest parzysta.");
+        } else {
+            console.log("Suma dzielników jest nieparzysta.");
+        }
+
+
+        // zad 5
+        // narysowac figure zlozona z giwazdek uzytkownik podaje n i k 
+        // n to ilosc figur 
+        // k to jest ilosc gwiazdek w podstawie 
+        // figura ma byc klepsydra ma byc ich podanych n
+
+    </script>
+</body>
+</html>
