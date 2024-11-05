@@ -7,20 +7,24 @@
 </head>
 <body>
     <script>
-        let bok1=parseInt(prompt("Podaj dlugosc boku"));
-        let bok2=parseInt(prompt("Podaj dlugosc boku"));
-        let zadanie =parseFloat(prompt("1.Pole,2.Obwod"))
-        switch(zadanie){
-            case 1:
-            document.write(`Pole prostokata wynosi: ${bok1} i ${bok2} = ${bok1*bok2}`);
-            break;
-            case 2:
-            document.write(`Obowd prostokata wynosi: ${bok1} i ${bok2} = ${(bok1*2+bok2*2)}`);
-            break;
-            default:
-            document.write("Nie ma takiej opcji");
-            break;
-        }
+        let bok = parseInt(prompt("Podaj bok:"));
+         let bok2 = parseInt(prompt("Podaj bok2:"));
+         let zadanie=parseInt(prompt("1.pole, 2.obwod"))
+         if(bok>0&&bok2>0){
+             switch(zadanie){
+                 case 1:
+                     document.write(`Pole kwadratu wynosi : ${bok*bok2}`);
+                     break
+                 case 2:
+                     document.write(`Obwod kwadratu wynosi : ${2*(bok+bok2)}`);
+                     break
+                 default:
+                     document.write("Podano niepoprawne dane")
+                     break
+             }
+         }else{
+             document.write("Liczba nie moze byc ujemna")
+         }
     </script>
 </body>
 </html>
