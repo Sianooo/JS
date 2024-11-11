@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Czas</title>
+</head>
+<body>
+    <script>
+    //Pobieranie daty :
+    let data=new Date()
+    document.write(data)
+    let month=data.getMonth()
+    let day=data.getDay()
+    let year=data.getFullYear()
+    let hours=data.getHours()
+    let minutes=data.getMinutes()
+    let dayNumber=data.getDate()
+
+    switch(month){
+        case 0: 
+        month="Styczen"
+        document.write(month)
+        break
+        case 1: 
+        month="Luty"
+        document.write(month)
+        break
+        case 2: 
+        month="Marzec"
+        document.write(month)
+        break
+        case 3: 
+        month="Kwiecien"
+        document.write(month)
+        break
+        case 4: 
+        month="Maj"
+        document.write(month)
+        break
+        case 5: 
+        month="Czerwiec"
+        document.write(month)
+        break
+        case 6: 
+        month="Lipiec"
+        document.write(month)
+        break
+        case 7: 
+        month="Sierpien"
+        document.write(month)
+        break
+        case 8: 
+        month="Wrzesien"
+        document.write(month)
+        break
+        case 9: 
+        month="Pazdziernik"
+        document.write(month)
+        break
+        case 10: 
+        month="Listopad"
+        document.write(month)
+        break
+        case 11: 
+        month="Grudzien"
+        document.write(month)
+        break
+    }
+    switch(day){
+        case 1: 
+        day="Poniedzialek"
+        document.write(day)
+        break
+        case 2: 
+        day="Wtorek"
+        document.write(day)
+        break
+        case 3: 
+        day="Sroda"
+        document.write(day)
+        break
+        case 4: 
+        day="Czwartek"
+        document.write(day)
+        break
+        case 5: 
+        day="Piatek"
+        document.write(day)
+        break
+        case 6: 
+        day="Sobota"
+        document.write(day)
+        break
+        case 0: 
+        day="Niedziela"
+        document.write(day)
+        break
+    }
+
+    document.write(`<br> Dzisaj jest ${day} ${dayNumber} ${month} ${year} ${hours}:${minutes}`)
+
+
+    let data2=new Date(2024,11,24)
+    a=Date.parse(data)
+    b=Date.parse(data2)
+    let doWigili=(b-a)/1000/60/60/24
+    doWigili=Math.ceil(doWigili)
+    document.write(`<br> Do wigili pozostalo : ${doWigili} dni`)
+
+    
+
+    </script>
+</body>
+</html>

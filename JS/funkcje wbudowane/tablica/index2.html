@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tablice asocjacyjne</title>
+</head>
+<body>
+    <script>
+    // Tworzenie tablicy asocjacyjnej
+    var produkty = new Array(5);
+    produkty['Chleb'] = 2;
+    produkty['Maslo'] = 3;
+    produkty['Pomidor'] = 5;
+    produkty['Papryka'] = 6;
+    produkty['Kawa'] = 15;
+
+    // Tablica z losowymi indeksami
+    // let tablica = new Array(20);
+    // for (let i = 0; i < 20; i++) {
+    //     let rand = Math.floor(Math.random() * 5); 
+    //     tablica[i] = rand;
+    // }
+
+    // // Tablica z nazwami produktów (indeksy od 0 do 4)
+    // let nazwy = ['Chleb', 'Maslo', 'Pomidor', 'Papryka', 'Kawa'];
+
+    // Wyświetlenie wartości produktów na podstawie losowych indeksów
+    for(let key in produkty)
+    {
+        // let key = nazwy[el]; // Bezpośrednie przypisanie nazwy produktu
+        // let cena = produkty[key]; // Uzyskanie ceny na podstawie nazwy
+        let randomPrice = Math.floor(Math.random() * 19 + 1); // Losowa cena od 1 do 19
+        document.write(`Wartość produktu ${key} to ${randomPrice} zł<br>`);
+    }
+
+    </script>
+</body>
+</html>

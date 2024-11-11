@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="pl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>JS</title>
+</head>
+<body>
+     <script>
+        //Zadanie 1
+        // let kwota = parseFloat(prompt("Podaj kwote wejsciowa: "));
+        // let okres = parseFloat(prompt("Podaj okres oszczedzania w latach"));
+        // let polroczne=0;
+        // for(let i=0;i<okres*2;i++) {
+        //     polroczne++;
+        //     kwota += (kwota*0.02);
+        //     document.write(`Polrocze: ${polroczne} oszczednosci: ${kwota.toFixed(2)}<br>`);
+        // } 
+
+        //Zadanie 2
+        // function potega(a, b) {
+        //     let result = 1;
+        //     for (let i = 0; i < b; i++) {
+        //         result *= a;
+        //     }
+        //     return result;
+        //     //return Math.pow(a,b);
+        // }
+
+        // function NWD(a, b) {
+        //     while(a != b) {
+        //         if(a > b) {
+        //             a -= b;
+        //         } else {
+        //             b -= a;
+        //         }
+        //     }
+        //     return a;
+        // }
+
+        // let a = parseFloat(prompt("Podaj pierwsza liczbe: "));
+        // let b = parseFloat(prompt("Podaj druga liczbe: "));
+        // let zadanie = prompt("1-dodawanie, 2-odejmowanie, 3-mnozenie, 4-dzielenie, 5-potega, NWD");
+
+        // switch (zadanie) {
+        //     case "1":
+        //         document.write(`Wynik dodawania: ${a} + ${b} = ${a + b}`);
+        //         break;
+        //     case "2":
+        //         document.write(`Wynik odejmowania: ${a} - ${b} = ${a - b}`);
+        //         break;
+        //     case "3":
+        //         document.write(`Wynik mnożenia: ${a} * ${b} = ${a * b}`);
+        //         break;
+        //     case "4":
+        //         if (b !== 0) {
+        //             document.write(`Wynik dzielenia: ${a} / ${b} = ${a / b}`);
+        //         } else {
+        //             document.write("Nie można dzielić przez zero!");
+        //         }
+        //         break;
+        //     case "5":
+        //         document.write(`Wynik potęgi: ${a} do potęgi ${b} = ${potega(a, b)}`);
+        //         break;
+        //     case "NWD":
+        //         document.write(`Wynik NWD ${a} i ${b} = ${NWD(a, b)}`);
+        //         break;
+        //     default:
+        //         document.write("Nie ma takiej instrukcji");
+        //         break;
+        // }
+
+        // Zadanie 3 (poprawione):
+        let liczba = parseInt(prompt("Podaj liczbę: "));
+        let suma = 0;
+        for(let i = 1; i <= liczba; i++) {
+            if(i % 2 === 0) {
+                suma += i;
+                document.write(`<b>${i}</b><br>`);
+            } else {
+                document.write(`${i}<br>`);
+            }
+        }
+        document.write(`Suma liczb parzystych: ${suma}`);
+
+        // Zadanie 4 (poprawione):
+        let nazwisko = prompt("Podaj nazwisko: ");
+        let czyJestesUczniem = confirm("Czy jesteś uczniem?"); // true/false
+
+        if(czyJestesUczniem) {
+            let szkola = prompt("Podaj nazwę szkoły:");
+            document.write(`<br>Nazwa szkoły: ${szkola}`);
+        } else {
+            alert("Strona nie jest przeznaczona dla ciebie");
+        }
+    </script>
+</body>
+</html>

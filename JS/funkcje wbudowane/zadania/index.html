@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1>Formatowanie tekstu</h1>
+    <script>
+        // Formatowanie tekstu: kolor czcionek losowy: czerwony, niebieski, złoty, zielony i czarny
+        let tekst = "Ala ma kota i kanarka";
+        let colors = ['red', 'blue', 'yellow', 'green', 'black'];
+        
+        for (let i = 0; i < tekst.length; i++) {
+            let losowyKolor = colors[Math.floor(Math.random() * colors.length)];
+            document.write(`${tekst[i].fontcolor(losowyKolor)}`);
+        }
+
+        document.write("</br>")
+
+        // Co drugi znak w napisie (superscript/subscript)
+        for (let i = 0; i < tekst.length; i++) {
+            if (i % 2 === 0) {
+                document.write(`${tekst[i].sup()}`);
+            } else {
+                document.write(`${tekst[i].sub()}`);
+            }
+        }
+
+        document.write("</br>")
+
+        // Usuwanie spacji i kropki, zamiana na wielkie litery oraz z malych na duze i tak w kolko
+        let napis = prompt("Podaj zdanie");
+        let napisBezSpacji = napis.replaceAll(" ", "").replaceAll(".", "").toLocaleUpperCase();
+        document.write(`${napisBezSpacji} <br>`)
+
+        let size=1;
+        let direction=1;
+
+        for(let i=0;i<=napis.length;i++){
+            document.write(`${napisBezSpacji[i].fontsize(size)}`)
+            size+=direction;
+            if(size==1||size==7){
+                direction*=-1
+            }
+        }
+
+    </script>
+</body>
+</html>

@@ -1,0 +1,27 @@
+<script>
+//tablice asocjacyjna o rozmiarze 6 gdzie kluczami sa nazwiska a wartosciami srednia ocen, wypelnij danymi pobranymi od uzytkownika
+//wyswietl tablice w postaci : nazwisko sredia ocen : srednia, znajdz ucznia o najwyzszej sredniej(nazwisko + srednia)
+
+// let podajUcznia=prompt("Podaj nazwisko ucznia")
+// let srednia=prompt("Podaj ocene ucznia")
+function sortUczniowie(a,b){
+    return a.srednia-b.srednia
+}
+
+let uczniowie=[]
+for(let i=0;i<6;i++){
+    var podajUcznia=prompt("Podaj nazwisko ucznia")
+    var srednia=parseInt(prompt("Podaj ocene ucznia"))
+    uczniowie.push({ 
+        nazwisko: podajUcznia,
+        srednia: srednia })
+    document.write(`${podajUcznia} srednia ocen : ${srednia}<br>`)
+    
+
+}
+uczniowie.sort(sortUczniowie)
+if(uczniowie.length>0){
+    document.write(`${uczniowie[uczniowie.length-1].nazwisko} ma najwyzsza srednia  ${uczniowie[uczniowie.length-1].srednia}`)
+}
+
+</script>

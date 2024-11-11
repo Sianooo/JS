@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./style.css">
+    <title>Stylowanie</title>
+</head>
+<body>
+    <div id="first">
+        Moja stronka www
+    </div>
+    <div id="second">
+        Witam cie na mojej stronie
+    </div>
+    <script>
+        let first = document.querySelector("#first");
+        let second = document.querySelector("#second");
+        
+        let a=1;
+        if(a==1){
+        first.innerHTML="Strona WWW Sanowski"
+        first.style.backgroundColor="blue";
+        }else{
+        first.innerHTML="Wlascicielem strony jest P Sanowski"
+        }
+    </script>
+</body>
+</html>

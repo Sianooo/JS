@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tablice</title>
+</head>
+<body>
+    <h1>Tablice </h1>
+    <script>
+        let tab = new Array(20);
+        for (let i = 0; i < 20; i++) {
+        let rand = Math.floor(Math.random() * 99+1); 
+        tab[i] = rand;
+        document.write(`Wartosc tablicy: [${i}]: ${tab[i]} <br>`);
+        }
+
+        tab.reverse()
+        document.write(`<br> Odwrocona tablica:${tab}`)
+
+        function toSort(a,b) {//to musi byc bo sort w js sortuje po pokoleji jak idzie pierwsza cyfra w liczbie 1,2..
+            return a-b;
+        }
+        tab.sort(toSort)
+        document.write(`<br>Posortowana tablica ${tab}`)
+        
+        // let liczba = parseInt(prompt("Podaj liczbe "));
+        // let i = tab.indexOf(liczba);
+        // if (tab.includes(liczba)) {
+        //     document.write(`<br> Liczba ${liczba} znajduje sie w tablicy na indexie ${i}`);
+        // } else {
+        //     document.write(`<br> Liczba ${liczba} nie znajduje sie w tablicy`);
+        // }
+
+        tab2=tab.slice(4,11)
+        document.write(`<br><br> Tablica najpierw :${tab}`)
+        document.write(`<br> Tablica po wycieciu :${tab2}`)
+        
+        tab3=tab.splice(4,4)
+        document.write(`<br> Usuniete elementy z tablicy :${tab3}`)
+
+        tab.push([333,444,555])
+        document.write(`<br> Dodawanie elementow na koniec tablicy: ${tab}`)
+
+        document.write(`<br> Rozmiar tablicy :${tab.length}`)
+
+        let a=tab.join("")
+        document.write(`<br> Laczy elementy tablicy :${a}`)
+        // if(a==2){
+        //     document.write(`i`)
+        // }else{
+        //     document.write(`${a}`)
+        // }
+
+
+    </script>
+</body>
+</html>
