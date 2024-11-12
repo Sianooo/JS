@@ -4,6 +4,12 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
+    <style>
+        *{
+            background-color: black;
+            color: white;
+        }
+    </style>
 </head>
 <body>
     <script>
@@ -37,6 +43,7 @@
     // document.write(`<br><b>Suma oszczędności Ali na koniec: ${sumaOszczednosciAla.toFixed(2)} zł</b>`);
     // document.write(`<br><b>Suma oszczędności Basi na koniec: ${sumaOszczednosciBasia.toFixed(2)} zł</b>`);
 
+
     // let liczba = parseInt(prompt("Podaj liczbę"));  // Wczytanie liczby od użytkownika
     // let sumaKwadratow = 0;  // Inicjalizacja sumy kwadratów
 
@@ -54,7 +61,8 @@
     //     document.write(`${liczba} nie jest liczbą doskonałą drugiego rzędu.`);
 //     // }
 
-//     let a = parseInt(prompt("Podaj do ilu ma być liczba:"));
+
+//let a = parseInt(prompt("Podaj do ilu ma być liczba:"));
 
 // for (let i = 1; i <= a; i++) {
 //     let kwadrat = false;
@@ -69,6 +77,27 @@
 //         document.write(i + " ");
 //     }
 // }
+
+
+        // let liczba = parseInt(prompt("Podaj liczbę")), 
+        //     suma = 0;
+
+        // // Obliczanie sumy kwadratów dzielników właściwych
+        // for (let i = 1; i <= liczba / 2; i++) {
+        //     if (liczba % i === 0) {
+        //         suma += i * i;
+        //     }
+        // }
+
+        // // Sprawdzenie, czy liczba jest doskonała drugiego rzędu
+        // if (suma === liczba) {
+        //     document.write(`${liczba} jest doskonała drugiego rzędu.`);
+        // } else { 
+        //     document.write(`${liczba} nie jest doskonała drugiego rzędu.`);
+        // }
+
+
+
 
         // let bok1= parseInt(prompt("Podaj liczbe:"));
         // let bok2= parseInt(prompt("Podaj liczbe2:"));
@@ -97,6 +126,7 @@
         // wykonac zestawienie kwot otrzymanych przez ale w ciagu d dni(d podaje uzytkownik) jezeli kwota
         //  z 1 dnia wynosi 3 zl a kazdego jest o 2 zl wieksza niz w dniu poprzednim 
 
+
         // let dzien=parseInt(prompt("Podaj ilosc dni:"));
         // let kwota=3;
         // for(let i=1;i<=dzien;i++){
@@ -114,6 +144,7 @@
         //zad 2 
         // wypisac wszystkie liczby naturalne od 1 do n(n podaje uzytkownik) pogrubic
         // tte ktore sa kwadratami liczb naturalnych i obliczyc sume pogrubionych 
+
 
         // let liczba = parseInt(prompt("Podaj liczbe:"));
         // let suma = 0;
@@ -144,53 +175,52 @@
         // w zaleznosci od wyboru uzytkownika wyznaczyc pole lub obwod kwadratu o boku pobranym 
         //od uzytkownika i trzeba zadbac zeby bok byl dodatni 
         
-         let bok = parseInt(prompt("Podaj bok:"));
-         let bok2 = parseInt(prompt("Podaj bok2:"));
-         let zadanie=parseInt(prompt("1.pole, 2.obwod"))
-         if(bok>0&&bok2>0){
-             switch(zadanie){
-                 case 1:
-                     document.write(`Pole kwadratu wynosi : ${bok*bok2}`);
-                     break
-                 case 2:
-                     document.write(`Obwod kwadratu wynosi : ${2*(bok+bok2)}`);
-                     break
-                 default:
-                     document.write("Podano niepoprawne dane")
-                     break
-             }
-         }else{
-             document.write("Liczba nie moze byc ujemna")
-         }
+    
+        //  let bok = parseInt(prompt("Podaj bok:"));
+        //  let bok2 = parseInt(prompt("Podaj bok2:"));
+        //  let zadanie=parseInt(prompt("1.pole, 2.obwod"))
+        //  if(bok>0&&bok2>0){
+        //      switch(zadanie){
+        //          case 1:
+        //              document.write(`Pole kwadratu wynosi : ${bok*bok2}`);
+        //              break
+        //          case 2:
+        //              document.write(`Obwod kwadratu wynosi : ${2*(bok+bok2)}`);
+        //              break
+        //          default:
+        //              document.write("Podano niepoprawne dane")
+        //              break
+        //      }
+        //  }else{
+        //      document.write("Liczba nie moze byc ujemna")
+        //  }
         
         // zad 4
         // pobrac liczbe wypisac wszystkie jej dzielniki włacznie z 1 i nia samą wyznaczyc sume tych dzielników 
         //i sprawdzic czy ta suma jest parzysta (jak jest parzysta napisac ze parzysta)
 
-        // Pobranie liczby od użytkownika
-        // Pobranie liczby od użytkownika
-        let liczba = parseInt(prompt("Podaj liczbę: "));
-        let sumaDzielnikow = 0;
+        // let liczba = parseInt(prompt("Podaj liczbę: "));
+        // let sumaDzielnikow = 0;
 
-        // Wypisanie dzielników i obliczenie ich sumy
-        let dzielnikiText = "Dzielniki liczby " + liczba + " to: ";
+        // // Wypisanie dzielników i obliczenie ich sumy
+        // let dzielnikiText = "Dzielniki liczby " + liczba + " to: ";
 
-        for (let i = 1; i <= liczba; i++) {
-            if (liczba % i === 0) {
-                dzielnikiText += i + " ";
-                sumaDzielnikow += i;
-            }
-        }
+        // for (let i = 1; i <= liczba; i++) {
+        //     if (liczba % i === 0) {
+        //         dzielnikiText += i;
+        //         sumaDzielnikow += i;
+        //     }
+        // }
 
-        console.log(dzielnikiText);
-        console.log("Suma dzielników: " + sumaDzielnikow);
+        // document.write(dzielnikiText + "<br>");
+        // document.write("Suma dzielników: " + sumaDzielnikow + "<br>");
 
-        // Sprawdzenie, czy suma dzielników jest parzysta
-        if (sumaDzielnikow % 2 === 0) {
-            console.log("Suma dzielników jest parzysta.");
-        } else {
-            console.log("Suma dzielników jest nieparzysta.");
-        }
+        // // Sprawdzenie, czy suma dzielników jest parzysta
+        // if (sumaDzielnikow % 2 === 0) {
+        //     document.write("Suma dzielników jest parzysta.");
+        // } else {
+        //     document.write("Suma dzielników jest nieparzysta.");
+        // }
 
 
         // zad 5
@@ -198,6 +228,70 @@
         // n to ilosc figur 
         // k to jest ilosc gwiazdek w podstawie 
         // figura ma byc klepsydra ma byc ich podanych n
+
+
+        //Zadanie z lekcji ;
+
+         // let kwota = parseFloat(prompt("Podaj kwote wejsciowa: "));
+        // let okres = parseFloat(prompt("Podaj okres oszczedzania w latach"));
+        
+        // let polroczne=0;
+        // for(let i=0;i<okres*2;i++) {
+        //     polroczne++;
+        //     kwota += (kwota*0.02);
+        //     document.write(`Polrocze: ${polroczne} oszczednosci: ${kwota.toFixed(2)}<br>`);
+        // } 
+
+
+        // zad 5
+        // narysowac figure zlozona z giwazdek uzytkownik podaje n i k 
+        // n to ilosc figur 
+        // k to jest ilosc gwiazdek w podstawie 
+        // figura ma byc klepsydra ma byc ich podanych n
+
+        // let n = parseInt(prompt("Podaj liczbę klepsydr (n):"));
+        // let k = parseInt(prompt("Podaj szerokość podstawy (k):"));
+
+        // // Rysowanie n klepsydr
+        // for (let x = 0; x < n; x++) {
+        //     // Górna część klepsydry
+        //     for (let i = k; i > 0; i -= 2) {
+        //         let spaces = "";
+        //         let stars = "";
+
+        //         // Tworzenie spacji
+        //         for (let s = 0; s < (k - i) / 2; s++) {
+        //             spaces += " ";
+        //         }
+                
+        //         // Tworzenie gwiazdek
+        //         for (let s = 0; s < i; s++) {
+        //             stars += "*";
+        //         }
+
+        //         document.write(spaces + stars + "<br>");
+        //     }
+
+        //     // Dolna część klepsydry
+        //     for (let i = 3; i <= k; i += 2) {
+        //         let spaces = "";
+        //         let stars = "";
+
+        //         // Tworzenie spacji
+        //         for (let s = 0; s < (k - i) / 2; s++) {
+        //             spaces += " ";
+        //         }
+                
+        //         // Tworzenie gwiazdek
+        //         for (let s = 0; s < i; s++) {
+        //             stars += "*";
+        //         }
+
+        //         document.write(spaces + stars + "<br>");
+        //     }
+
+        //     document.write("<br>"); // Przerwa między klepsydrami
+        // }
 
     </script>
 </body>
