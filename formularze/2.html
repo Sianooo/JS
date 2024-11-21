@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Formularz 2</title>
+</head>
+<body>
+    <h1>Wyznaczanie ilosci puszek farby</h1>
+    <form name="form1">
+        <label for="szerokosc">Szerokosc</label>
+        <input type="text" name="szerokosc" id="szerokosc">
+        <br>
+        <label for="dlugosc">Dlugosc</label>
+        <input type="text" name="dlugosc" id="dlugosc">
+        <br>
+        <label for="wysokosc">Wysokosc</label>
+        <input type="text" name="wysokosc" id="wysokosc">
+        <br>
+        <label for="">Czy do pomalowania wynajmujesz firme? :</label>
+        <input type="radio" name="wynajem" id="wynajem">
+        <label for="">Tak</label>
+        <input type="radio" name="wynajem" id="wynajem">
+        <label for="">Nie</label>
+        <br>
+        <label for="oprocentowanie">Kredyt</label>
+        <input type="checkbox" name="oprocentowanie" id="oprocentowanie">
+        <br>
+        <button type="button" onclick="policz()">Wyślij</button>
+        <p id="firma"></p>
+        <p id="powierzchnia"></p>
+        <p id="wynik"></p>
+    </form>
+    <script>
+    //podaj wymiary(szerokosc , dlugosc, wysokosc) pokoju od uzytkowaniaka ,wyznacz ilosc puszek farby potrzebna 
+    //do pomalowania pokoju (bez podlogi) jezeli jedna puszka farby wstarcza na pomalowanie 7m2 
+
+        function policz(){
+            let szerokosc = document.querySelector('#szerokosc').value
+            let dlugosc = document.querySelector('#dlugosc').value
+            let wysokosc = document.querySelector('#wysokosc').value
+
+            let powierzchnia = 2 * (dlugosc * wysokosc) +2* (szerokosc * wysokosc)+(szerokosc * dlugosc)
+            let ilosc = Math.ceil(powierzchnia/7)
+
+            let cena = 50 * ilosc
+
+            document.querySelector('#powierzchnia').innerHTML = (`Powierzchnia pokoju wynosi ${powierzchnia.toFixed(2)} m2`)
+            document.querySelector('#wynik').innerHTML = (`${ilosc} puszek potrzeba do pomalowania pokoju`)
+            
+            if(document.querySelector('#wynajem').checked){ 
+                cena+=powierzchnia*5
+                document.querySelector('#firma').innerHTML = (`Do pomalowania wynajmujesz firme i cena wynosi ${cena.toFixed(2)} zł`)
+            }else{
+                document.querySelector('#firma').innerHTML = (`Do pomalowania nie wynajmujesz firme i cena za puszki farby wynosi ${cena.toFixed(2)} zł`)
+            }
+
+            if(document.querySelector('#oprocentowanie').checked){
+                cena=Math.ceil((cena*1.5)*100)/100
+                document.querySelector('#firma').innerHTML = (`Splata kredytu wynosi ${cena.toFixed(2)} zł`)
+            }
+        }
+
+    </script>
+</body>
+</html>
