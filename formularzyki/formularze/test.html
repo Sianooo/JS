@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Test</title>
+</head>
+<body>
+    <form>
+        <label for="name">Podaj imie</label>
+        <input type="text" name="name" id="name">
+        <label for="lastname">Podaj nazwisko</label>
+        <input type="text" name="lastname" id="lastname">
+        <button type="button" onclick="wypiszDane()">Wyslij</button>
+    </form>
+    <p id="wyswietl"></p>
+    <script>
+        function wypiszDane(){
+            let name =document.querySelector('#name').value;
+            let lastname =document.querySelector('#lastname').value;
+            document.querySelector('#wyswietl').innerHTML=(`${name} witaj na stronie!`)
+        }
+    </script>
+</body>
+</html>

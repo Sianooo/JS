@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Formularz</title>
+</head>
+<body>
+    <form name="form1">
+        <label for="surname">Podaj nazwisko</label>
+        <input type="text" name="lastname" id="surname">
+        <button type="button" onclick="wypiszDane()">Wyślij</button>
+    </form>
+    <p id="wynik"></p>
+    <script>
+        //Sposob 1: pobieranie przez id
+
+        function wypiszDane(){
+            let surname = document.querySelector('#surname')
+            document.querySelector('#wynik').innerHTML = (`${surname.value} witaj na mojej stornie!`)
+        }
+
+        //Sposob 2: pobieranie przez index
+
+        // function wypiszDane(){
+        //     let surname = document.forms[0].elements[0].value
+        //     document.querySelector('#wynik').innerHTML = (`${surname} witaj na mojej stornie!`)
+        // }
+
+        //Mozna mieszac 
+
+        // function wypiszDane(){
+        //     let surname = document.forms[0].elements['lastname'].value
+        //     document.querySelector('#wynik').innerHTML = (`${surname} witaj na mojej stornie!`)
+        // }
+
+        //Sposob 3: pobieranie przez nam
+        // function wypiszDane(){
+        //     let surname = document.forms['form1'].elements['lastname'].value
+        //     document.querySelector('#wynik').innerHTML = (`${surname} witaj na mojej stornie!`)
+        // }
+    </script>
+</body>
+</html>
