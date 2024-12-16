@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <form>
+        <label>Podaj długość: (m)</label>
+        <input type="text" id="dlugosc" name="dlugosc">
+        <br>
+        <label>Podaj szerokosc: (m) </label>
+        <input type="text" id="szerokosc" name="szerokosc">
+        <br>
+        <br>
+        <input type="radio" name="czyFirma" id="czyFirma">Czy wykonac ogrodzenie z firma?
+        <br>
+        <input type="radio" name="czyBezFirma" id="czyBezFirma">Czy wykonac ogrodzenie bez firmy?
+        <br>
+        <br>
+        Material:
+        <select id="material">
+            <option value="drewno">drewno</option>
+            <option value="kamien">kamien</option>
+            <option value="cegla">cegla</option>
+            <option value="metal">metal</option>
+        </select>
+        <br>
+        Co sie znajduje w ogrodku? :
+        <br>
+        <select id="coJestWOgrodku" multiple>
+            <option value="dom">dom</option>
+            <option value="garaz">garaz</option>
+            <option value="basen">basen</option>
+            <option value="skladzik">skladzik</option>
+        </select>
+        <br>
+        Gdzie mieszkasz? :
+        <br>
+        <select id="gdzieMieszkasz" multiple>
+            <option value="wies">wies</option>
+            <option value="miasto">miasto</option>
+            <option value="zadupie">zadupie</option>
+        </select>
+        <br>
+        <br>
+        <button type="button" onclick="oblicz()">Wyslij</button>
+    </form>
+    <p id="wynik"></p>
+    <p id="firma"></p>
+    <p id="obwodd"></p>
+    <p id="ogrodContent"></p>
+    <p id="miejsceContent"></p>
+
+    <script>
+        function oblicz() {
+            let dlugosc = document.querySelector('#dlugosc').value;
+            let szerokosc = document.querySelector('#szerokosc').value;
+            let czyFirma = document.querySelector('#czyFirma').checked;
+            let czyBezFirma = document.querySelector('#czyBezFirma').checked;
+            let material = document.querySelector('#material').value;
+            let coJestWOgrodku = document.querySelector('#coJestWOgrodku');
+            let gdzieMieszkasz = document.querySelector('#gdzieMieszkasz');
+            
+            let cena = 0;
+
+            let obwod = (parseFloat(dlugosc) * 2) + (parseFloat(szerokosc) * 2);
+
+            if (material == 'drewno') {
+                cena = obwod * 100;
+            } else if (material == 'kamien') {
+                cena = obwod * 150;
+            } else if (material == 'metal') {
+                cena = obwod * 300;
+            } else if (material == 'cegla') {
+                cena = obwod * 200;
+            }
+
+            if (czyFirma) {
+                cena += obwod * 100;
+                document.querySelector('#firma').innerHTML = `Wzięto firmę`;
+            }
+
+            if (czyBezFirma) {
+                document.querySelector('#firma').innerHTML = `Nie wzięto firmy`;
+            }
+
+            document.querySelector('#obwodd').innerHTML = `Obwód: ${obwod} m`;
+            document.querySelector('#wynik').innerHTML = `Cena ogrodzenia: ${cena} zł`;
+
+            const selectedOptions = coJestWOgrodku.selectedOptions;
+            let ogrodekContents = "W ogrodku znajdują się:<br>";
+            for (const option of selectedOptions) {
+                ogrodekContents += `${option.value}<br>`;
+            }
+
+            document.querySelector('#ogrodContent').innerHTML = ogrodekContents;
+
+            const selectedOptions2 = gdzieMieszkasz.selectedOptions;
+            let miejsceContents = "Mieszkasz w:<br>";
+            for (const option2 of selectedOptions2) {
+                miejsceContents += `${option2.value}<br>`;
+            }
+
+            document.querySelector('#miejsceContent').innerHTML = miejsceContents;
+        }
+    </script>
+</body>
+</html>

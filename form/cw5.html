@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    pole:
+    <input type="checkbox" name="pole" id="obwod">
+    <br>
+    obwod:
+    <input type="checkbox" name="obwod" id="obwod">
+    <br>
+    <label for="promien">promien</label>
+    <input type="number" id="promien">
+    <br>
+    <button type="button" onclick="oblicz()">Oblicz</button>
+    <p id="wynik"></p>
+    <script>
+        //pobierz za pomoca checkboxa wybor pole obwod ,
+        //pobieramy promien, oblicz 
+        function oblicz(){
+            let pole=document.querySelector('#pole')
+            let obwod=document.querySelector('#obwod')
+            let promien=document.querySelector('#promien').value
+
+            let wynik='';
+
+            if(isNaN(promien) || promien <= 0){
+                wynik = 'Proszę podać poprawny promień!';
+            } else {
+                if(pole) {
+                    let poleKoła = Math.PI * promien * promien;
+                    wynik += `Pole koła: ${poleKoła.toFixed(2)}<br>`;
+                }
+                if(obwod) {
+                    let obwódKoła = 2 * Math.PI * promien;
+                    wynik += `Obwód koła: ${obwódKoła.toFixed(2)}<br>`;
+                }
+            }
+            document.querySelector('#wynik').innerHTML = wynik;
+        }
+    </script>
+</body>
+</html>

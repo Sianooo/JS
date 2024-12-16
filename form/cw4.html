@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1>Montaz oswietlenia</h1>
+    <form>
+        <label for="iloscPunktow">Ilosc punktow montazowych</label>
+        <input type="number" id="iloscPunktow">
+        <br>
+        <input type="radio" id="neonowe" name="neonowe" value="neonowe">
+        <label for="neonowe">neonowe</label>
+        <br>
+        <input type="radio" id="halogenowe" name="halogenowe" value="halogenowe">
+        <label for="halogenowe">halogenowe</label>
+        <br>
+        <input type="radio" id="led" name="led" value="led">
+        <label for="led">led</label> 
+        <br>
+        Rodzaj okablowania
+        <select id="rodzajOkablowania" name="rodzajOkablowania">
+            <option value="bezprzewodowe">bezprzewodowe</option>
+            <option value="jednomodowe">jednomodowe</option>
+            <option value="dwumodowe">dwumodowe</option>
+        </select>
+        <br>
+        <br>
+        Wybor pomieszczenia
+        <select multiple name="wyborPomieszczenia" id="wyborPomieszczenia">
+            <option value="pokojDzienny">pokoj dzienny</option>
+            <option value="kuchnia">kuchnia</option>
+            <option value="sypialnia">sypialnia</option>
+            <option value="przedpokoj">przedpokoj</option>
+            <option value="pracownia">pracownia</option>
+        </select>
+        <br>
+        <button type="button" onclick="oblicz()">Wyznacz cene</button>
+    </form>
+    <p id="oswietlenie"></p>
+    <script>
+        //naglowkiem 2 stopnia : Montaz oswietlenia , dopobrania ilosc punktow montazowych, 
+        //wybierz rodzaj oswietlenia : (checkbox) neonowe,halogenowe,LED
+        //wybierz rodzaj okablowania (lista jednokrotna) : bezprzewodowe , jednomodowe,
+         //dwumodowe , wybor pomieszczenia w ktorym ma znajdowac 
+        //sie oswietlenia (lisat wienokrotna): pokoj dzienny,kuchnia,sypialnia,przedpokoj,
+        //pracownia , przycisk wyznacz cene neonowe =15, halogenowe =20, led = 25
+        //bezprzewodowe punkt 30zl jednomodowe punkt 10zl dwumodowe punkt 8zl wypisz
+        // pomieszczenia w ktorych bedzie matowane oswietlenie
+
+        function oblicz(){
+        let punkty = document.querySelector('#iloscPunktow').value;
+        let neonowe = document.querySelector('#neonowe').checked;
+        let halogenowe = document.querySelector('#halogenowe').checked;
+        let led = document.querySelector('#led').checked;
+        let rodzajOkablowania = document.querySelector('#rodzajOkablowania').value;
+        let wyborPomieszczenia = document.querySelector('#wyborPomieszczenia');
+        let cena = 0;
+
+        if (neonowe) {
+            cena = 15;
+        } else if (halogenowe) {
+            cena = 20;
+        } else if (led) {
+            cena = 25;
+        }
+
+        switch (rodzajOkablowania) {
+            case 'bezprzewodowe':
+                cena += 30;
+                break;
+            case 'jednomodowe':
+                cena += 10;
+                break;
+            case 'dwumodowe':
+                cena += 8;
+                break;
+        }
+
+        cena *= punkty;
+
+        let wynik = `Cena za oświetlenie wynosi: ${cena} PLN<br>`;
+
+        const selectedOptions = wyborPomieszczenia.selectedOptions;
+        let pomieszczenie = "Pomieszczenie, w którym będzie montowane oświetlenie:<br>";
+        for (const option of selectedOptions) {
+            pomieszczenie += `${option.value}<br>`;
+        }
+
+        document.querySelector('#oswietlenie').innerHTML = wynik + pomieszczenie;
+    }
+    </script>
+</body>
+</html>
