@@ -3,9 +3,60 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <link rel="stylesheet" href="styl.css">
+    <title>Buty 2025 – Dobierz Obuwie</title>
 </head>
 <body>
-    
+    <div class="naglowek">
+        <img class="obrazek" id="obrazek" alt="">
+        <h1>Nie masz pomysłu na buty? Pomożemy!</h1>
+        <p id="czasWyswietlany"></p>
+    </div>
+    <hr>
+    <div class="menu">
+        <a href="index.html">
+            <button class="przycisk">Główna</button>
+        </a>
+        <a href="nowosci.html">
+            <button class="przycisk">Nowości</button>
+        </a>
+        <a href="kolekcje.html">
+            <button class="przycisk">Kolekcje</button>
+        </a>
+        <a href="opinie.html">
+            <button class="przycisk">Opinie</button>
+        </a>
+    </div>
+
+    <div class="main">
+        <form id="shoe-form" class="shoe-form">
+            <h2>Dobierz idealne obuwie</h2>
+
+            <label for="occasion">Na jaką okazję szukasz butów?</label>
+            <select id="occasion" name="occasion" required>
+                <option value="">Wybierz...</option>
+                <option value="sport">Sport</option>
+                <option value="formal">Formalne</option>
+                <option value="casual">Codzienne</option>
+                <option value="outdoor">Outdoor</option>
+            </select>
+
+            <label for="size">Rozmiar buta</label>
+            <input type="number" id="size" name="size" min="35" max="50" placeholder="np. 42" required>
+
+            <label for="color">Preferowany kolor</label>
+            <input type="text" id="color" name="color" placeholder="np. czarny, biały">
+
+            <label for="budget">Budżet (PLN)</label>
+            <input type="number" id="budget" name="budget" min="50" placeholder="np. 200">
+
+            <button type="submit" class="przycisk">Dobierz obuwie</button>
+        </form>
+
+        <div id="shoe-result" class="shoe-result"></div>
+    </div>
+
+    <footer>Strone stworzył: Patryk Sanowski</footer>
+    <script src="script.js"></script>
 </body>
 </html>

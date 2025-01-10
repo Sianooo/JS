@@ -14,10 +14,18 @@ html{
     /* background-color: ; */
     display: flex;
     justify-content: space-between;
+    align-items: center;
 }
 .obrazek{
     width: 100px;
     height: 90px;
+}
+hr{
+    margin-top: 15px;
+}
+h2{
+    margin-top: 30px;
+    text-align: center;
 }
 .menu{
     padding: 40px;
@@ -53,12 +61,106 @@ footer{
     display: grid;
     grid-template-rows: repeat(2,1fr);
     grid-template-columns: repeat(3, 1fr);
-    grid-gap: 20px;
+    grid-gap: 40px;
     justify-content: center;
+    align-items: center;
+    margin: 0 auto;
+    width: fit-content;
+    transition: all .2s;
+}
+.zdjecie{
+    box-shadow: 5px 5px 5px 0px rgba(177, 177, 177, 0.75);
+}
+.opinie{
+    margin: 20px;
+}
+.rating-container {
+    display: flex;
+    gap: 5px;
+    justify-content: center;
+    margin: 20px 0;
+}
+
+.star {
+    font-size: 30px;
+    cursor: pointer;
+    color: lightgray;
+    transition: color 0.2s;
+}
+
+.star.selected,
+.star.hover,
+.star:hover ~ .star {
+    color: gold;
+}
+
+.review-form {
+    margin-top: 30px;
+    text-align: center;
+}
+
+.reviews-list {
+    margin-top: 20px;
+}
+
+.review-item {
+    border: 1px solid #ccc;
+    padding: 10px;
+    margin-bottom: 10px;
+    border-radius: 5px;
+}
+
+.review-stars {
+    color: gold;
+}
+.shoe-form {
+    max-width: 400px;
+    margin: 20px auto;
+    padding: 20px;
+    border: 1px solid #ccc;
+    border-radius: 10px;
+    background-color: #f9f9f9;
+}
+
+.shoe-form h2 {
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+.shoe-form label {
+    display: block;
+    margin-top: 10px;
+    font-weight: bold;
+}
+
+.shoe-form input,
+.shoe-form select {
+    width: 100%;
+    padding: 8px;
+    margin-top: 5px;
+    margin-bottom: 15px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+}
+
+.shoe-result {
+    max-width: 400px;
+    margin: 20px auto;
+    padding: 20px;
+    border: 1px solid #ccc;
+    border-radius: 10px;
+    background-color: #fff;
 }
 .przycisk:hover{
     transform:translateY(-6px)
 }
 .przycisk:active{
     transform:translateY(2px)
+}
+.zdjecie:hover{
+    transform: scale(1.1);
+}
+.zdjeciaZButami:hover .zdjecie:not(:hover){
+    transform: scale(0.9);
+    opacity: 0.6;
 }

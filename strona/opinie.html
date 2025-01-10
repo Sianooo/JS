@@ -3,45 +3,48 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="styl.css">
     <title>Buty 2025 – Galeria i Opinie</title>
 </head>
 <body>
     <div class="naglowek">
-    <h1>Podziel się swoją opinią o naszych butach</h1>
+    <img class="obrazek" id="obrazek" alt="">
+    <h1 >Podziel sie swoja opinią o naszych butach</h1>
     <p id="czasWyswietlany"></p>
-    <img id="zdjecie" alt="">
     </div>
+    <hr>
     <div class="menu">
         <a href="index.html">
-        <button>Strona główna</button>
+        <button class="przycisk">Główna</button>
         </a>
         <a href="nowosci.html">
-        <button>Nowości</button>
+        <button class="przycisk">Nowości</button>
         </a>
         <a href="kolekcje.html">
-        <button>Kolekcje</button>
+        <button class="przycisk">Kolekcje</button>
         </a>
         <a href="opinie.html">
-        <button>Opinie</button>
-        </a>
-        <a href="kontakt.html">
-        <button>Kontakt</button>
+        <button class="przycisk">Opinie</button>
         </a>
     </div>
-    <div class="formularz">
-        <form>
-<!-- Tytuł: „Podziel się swoją opinią o naszych butach”
-Pytania:
-„Jak oceniasz jakość butów?” (1-5 gwiazdek)
-„Czy buty są wygodne?” (skala ocen, np. „Bardzo wygodne” – „Mało wygodne”)
-„Jaki model butów Ci się podobał najbardziej?”
-Komentarze: Miejsce, gdzie użytkownicy mogą dodać dodatkowe uwagi. -->
-<!-- Sekcja 3: Top oceny użytkowników
-Tytuł: „Najlepiej oceniane buty”
-Lista najlepszych butów: Buty z najwyższymi ocenami użytkowników wyświetlają się w tej sekcji.
-Opcja sortowania: Możliwość sortowania wg „Najlepsza ocena”, „Najnowsze opinie”, „Najczęściej kupowane”. -->
+    <div class="opinie">
+        <h2>Dodaj swoją opinię:</h2>
+        <div class="rating-container" id="rating-container">
+            <span class="star" data-value="1">&#9733;</span>
+            <span class="star" data-value="2">&#9733;</span>
+            <span class="star" data-value="3">&#9733;</span>
+            <span class="star" data-value="4">&#9733;</span>
+            <span class="star" data-value="5">&#9733;</span>
+        </div>
+        <form class="review-form" id="review-form">
+            <textarea id="review-text" rows="4" cols="50" placeholder="Dodaj opis swojej opinii..."></textarea><br>
+            <button type="submit" class="przycisk">Dodaj opinię</button>
         </form>
+    </div>
+    <hr>
+    <h2>Opinie innych użytkowników:</h2>
+    <div class="reviews-list" id="reviews-list">
+        
     </div>
     <footer>Strone stworzył: Patryk Sanowski</footer>
     <script src="script.js"></script>
