@@ -12,13 +12,12 @@
     <h1 >Podziel sie swoja opinią o naszych butach</h1>
     <p id="czasWyswietlany"></p>
     </div>
-    <hr>
     <div class="menu">
         <a href="index.html">
         <button class="przycisk">Główna</button>
         </a>
         <a href="nowosci.html">
-        <button class="przycisk">Nowości</button>
+        <button class="przycisk">Pomoc</button>
         </a>
         <a href="kolekcje.html">
         <button class="przycisk">Kolekcje</button>
@@ -26,27 +25,30 @@
         <a href="opinie.html">
         <button class="przycisk">Opinie</button>
         </a>
+        <a href="opis.html">
+            <button class="przycisk">O nas</button>
+        </a>
     </div>
+    <hr>
     <div class="opinie">
         <h2>Dodaj swoją opinię:</h2>
-        <div class="rating-container" id="rating-container">
-            <span class="star" data-value="1">&#9733;</span>
-            <span class="star" data-value="2">&#9733;</span>
-            <span class="star" data-value="3">&#9733;</span>
-            <span class="star" data-value="4">&#9733;</span>
-            <span class="star" data-value="5">&#9733;</span>
+        <div class="pojemnik-oceny" id="pojemnik-oceny">
+            <span class="gwiazdka" data-wartosc="2">&#9733;</span>
+            <span class="gwiazdka" data-wartosc="3">&#9733;</span>
+            <span class="gwiazdka" data-wartosc="4">&#9733;</span>
+            <span class="gwiazdka" data-wartosc="1">&#9733;</span>
+            <span class="gwiazdka" data-wartosc="5">&#9733;</span>
         </div>
-        <form class="review-form" id="review-form">
-            <textarea id="review-text" rows="4" cols="50" placeholder="Dodaj opis swojej opinii..."></textarea><br>
+        <form class="formularz-opinii" id="formularz-opinii">
+            <textarea id="tekst-opinii" rows="4" cols="50" placeholder="Dodaj opis swojej opinii..."></textarea><br>
             <button type="submit" class="przycisk">Dodaj opinię</button>
         </form>
     </div>
-    <hr>
     <h2>Opinie innych użytkowników:</h2>
-    <div class="reviews-list" id="reviews-list">
+    <div class="lista-opinii" id="lista-opinii">
         
-    </div>
+    </div>    
     <footer>Strone stworzył: Patryk Sanowski</footer>
-    <script src="script.js"></script>
+    <script src="script2.js"></script>
 </body>
 </html>

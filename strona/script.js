@@ -1,9 +1,5 @@
-
-const stars = document.querySelectorAll('.star');
-const reviewForm = document.getElementById('review-form');
-const reviewText = document.getElementById('review-text');
-const reviewsList = document.getElementById('reviews-list');
-let currentRating = 0;
+const formularz = document.querySelector('#formularz-buty');
+const wynik = document.querySelector('#wynik');
 
 
 const wyswietlanieNapisu=()=>{
@@ -73,82 +69,24 @@ const zmianaObrazka = () => {
 
 zmianaObrazka();
 
-stars.forEach((star, index) => {
-    star.addEventListener('mouseover', () => {
-        stars.forEach((s, i) => {
-            if (i <= index) {
-                s.classList.add('hover');
-            } else {
-                s.classList.remove('hover');
-            }
-        });
-    });
 
-    star.addEventListener('mouseleave', () => {
-        stars.forEach(s => s.classList.remove('hover'));
-    });
-
-    star.addEventListener('click', () => {
-        currentRating = index + 1;
-        stars.forEach((s, i) => {
-            if (i < currentRating) {
-                s.classList.add('selected');
-            } else {
-                s.classList.remove('selected');
-            }
-        });
-    });
-});
-
-
-reviewForm.addEventListener('submit', (e) => {
+formularz.addEventListener('submit', (e) => {
     e.preventDefault();
 
-    if (currentRating === 0) {
-        alert('Proszę wybrać ocenę w gwiazdkach!');
+    const imie = document.querySelector('#imie').value.trim();
+    const typButy = document.querySelector('#typ-buty').value;
+    const rozmiarButy = document.querySelector('#rozmiar-buty').value;
+
+    if (!imie || !rozmiarButy) {
+        alert('Proszę uzupełnić wszystkie pola!');
         return;
     }
 
-    const reviewTextValue = reviewText.value.trim();
-    if (!reviewTextValue) {
-        alert('Proszę dodać opis do swojej opinii!');
-        return;
-    }
+    wynik.textContent = `Cześć ${imie}! Wybrałeś/aś buty typu "${typButy}" w rozmiarze ${rozmiarButy}. Świetny wybór!`;
+    wynik.style.display = 'block';
 
-    const reviewItem = document.createElement('div');
-    reviewItem.classList.add('review-item');
-    reviewItem.innerHTML = `
-        <div class="review-stars">${'&#9733;'.repeat(currentRating)}</div>
-        <p>${reviewTextValue}</p>
-    `;
-    reviewsList.appendChild(reviewItem);
-
-
-    currentRating = 0;
-    stars.forEach(s => s.classList.remove('selected'));
-    reviewText.value = '';
+    formularz.reset();
 });
 
-document.getElementById('shoe-form').addEventListener('submit', (e) => {
-    e.preventDefault();
 
-    const occasion = document.getElementById('occasion').value;
-    const size = document.getElementById('size').value;
-    const color = document.getElementById('color').value.trim();
-    const budget = document.getElementById('budget').value.trim();
 
-    if (!occasion || !size) {
-        alert("Proszę wypełnić wszystkie wymagane pola!");
-        return;
-    }
-
-    const result = document.getElementById('shoe-result');
-    result.innerHTML = `
-        <h3>Twoje idealne obuwie:</h3>
-        <p><strong>Okazja:</strong> ${occasion}</p>
-        <p><strong>Rozmiar:</strong> ${size}</p>
-        ${color ? `<p><strong>Kolor:</strong> ${color}</p>` : ''}
-        ${budget ? `<p><strong>Budżet:</strong> ${budget} PLN</p>` : ''}
-        <p>Sprawdź naszą kolekcję i znajdź idealne buty dla siebie!</p>
-    `;
-});
