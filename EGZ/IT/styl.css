@@ -1,0 +1,45 @@
+body{
+    background-color: #EEEEEE;
+    font-family: Helvetica;
+}
+.container{
+    width: 90%;
+    margin: auto;
+}
+.naglowek{
+    display: flex;
+
+}
+.logo,.menu{
+    background-color: lightblue;
+    height: 100px;
+    width: 50%;
+    padding-top: 10px;
+    padding-bottom: 10px;
+}
+.baner{
+    background-color: #DDDDDD;
+    width: 200px;
+}
+main{
+    color: navy;
+    margin: 50px;
+    height: 400px;
+}
+footer{
+    float: right;
+    background-color: lightblue;
+    padding: 10px;
+}
+button{
+    background-color: lightblue;
+    color: navy;
+}
+.menu{
+    color: navy;
+    font-size: 150%;
+    text-decoration: none;
+    font-weight: bold;
+    margin: 10px;
+    padding: 5px;   
+}
