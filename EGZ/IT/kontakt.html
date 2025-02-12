@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="pl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Firma IT</title>
+    <link rel="stylesheet" href="styl.css">
+</head>
+<body>
+    <section class="container">
+
+        <nav>
+            <section class="naglowek">
+                <img src="zdjecia/logo.png" alt="firma it">
+            </section>
+    
+            <section class="menu">
+                <a href="index.html">Strona Główna</a>
+                <a href="uslugi.html">Usługi</a>
+                <a href="kontakt.html">Kontakt</a>
+            </section>
+        </nav>
+
+        <header>
+            <img src="zdjecia/animacje.gif" alt="Usług informatyczne">
+        </header>
+
+        <main>
+            <h2>Kontakt</h2>
+            <table>
+                <tr>
+                    <td>Imie</td>
+                    <td><input type="text" id="imie"></td>
+                </tr>
+
+                <tr>
+                    <td>Nazwisko</td>
+                    <td><input type="text" id="nazwisko"></td>
+                </tr>
+
+                <tr>
+                    <td>e-mail</td>
+                    <td><input type="email" id="mail"></td>
+                </tr>
+
+                <tr>
+                    <td>Zgłoszenie</td>
+                    <td><textarea rows="10" cols="40" id="zgloszenie"></textarea></td>
+                </tr>
+
+                <tr>
+                    <td></td>
+                    <td><input type="checkbox" id="regulamin">Zapoznałem się z regulaminem</td>
+                </tr>
+
+                <tr>
+                    <td></td>
+                    <td>
+                        <input type="reset">
+                        <input type="submit" onclick="zaznaczenie()">
+                    </td>
+                </tr>
+            </table>
+            <hr>
+
+            <p id="wynik"></p>
+            
+        </main>
+
+        <footer>
+            <p>Autor strony: <b>0000000000000</b></p>
+        </footer>
+        <script defer src="script.js"></script>
+    </section>
+</body>
+</html>
