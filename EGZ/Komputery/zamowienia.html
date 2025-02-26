@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="pl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Zamówienia hurtowe</title>
+    <link rel="stylesheet" href="styl4.css">
+</head>
+<body>
+    <header>
+        <h1>Zamówienia hurtowe</h1>
+    </header>
+        
+    <section class="glowny">
+        <section class="lewy">
+            <h2>Aktualizacja i zamówienia <br> materiałów</h2>
+            <p>Do wewnętrznego użytku firmy</p>
+            <img src="obraz.png" alt="siec komputerowa">
+        </section>
+        <section class="prawy">
+            <table>
+                <tr>
+                    <th>Produkt</th>
+                    <th>Jednostka</th>
+                    <th>Dostępna ilość</th>
+                    <th>Aktualizacja</th>
+                    <th>Zamówienie</th>
+                </tr>
+                <tr id="id1">
+                    <td class="produkt">Skrętka U/UTP drut</td>
+                    <td>metr</td>
+                    <td class="ilosc" id="dostepnosc">20</td>
+                    <td><button class="aktualizuj">Aktualizuj</button></td>
+                    <td><button class="zamow">Zamów</button></td>
+                </tr>
+                <tr id="id2">
+                    <td class="produkt">Skrętka U/UTP linka</td>
+                    <td>metr</td>
+                    <td class="ilosc" id="dostepnosc">2</td>
+                    <td><button class="aktualizuj">Aktualizuj</button></td>
+                    <td><button class="zamow">Zamów</button></td>
+                </tr>
+                <tr id="id3">
+                    <td class="produkt">Wtyki 8P8C</td>
+                    <td>sztuki</td>
+                    <td class="ilosc" id="dostepnosc">10</td>
+                    <td><button class="aktualizuj">Aktualizuj</button></td>
+                    <td><button class="zamow">Zamów</button></td>
+                </tr>
+                <tr id="id4">
+                    <td class="produkt">Moduły Keystone</td>
+                    <td>sztuki</td>
+                    <td class="ilosc" id="dostepnosc">0</td>
+                    <td><button class="aktualizuj">Aktualizuj</button></td>
+                    <td><button class="zamow">Zamów</button></td>
+                </tr>
+            </table>
+        </section>
+    </section>
+
+    <footer>
+        <a target="_blank" href="http://sieci.pl">Nasza strona internetowa</a><br><br>
+        Stronę przygotował: 00000000000
+    </footer>
+
+    <script>
+        const iloscProduktow = document.querySelectorAll('.ilosc');
+        const nazwaProduktow = document.querySelectorAll('.produkt');
+        const aktualizujPrzycisk = document.querySelectorAll('.aktualizuj');
+        const zamowPrzycisk = document.querySelectorAll('.zamow');
+        let idZamowienia = 0;
+
+        function sprawdz() {
+            iloscProduktow.forEach((produkt) => {
+                if (produkt.innerHTML == 0) {
+                    produkt.style.backgroundColor = 'red';
+                } else if (produkt.innerHTML >= 1 && produkt.innerHTML <= 5) {
+                    produkt.style.backgroundColor = 'yellow';
+                } else if (produkt.innerHTML > 5) {
+                    produkt.style.backgroundColor = 'Honeydew';
+                }
+            });
+        }
+
+        aktualizujPrzycisk.forEach((przycisk, i) => {
+            przycisk.addEventListener('click', () => {
+                const nowaIlosc = prompt('Podaj nową ilość:');
+                iloscProduktow[i].innerHTML = nowaIlosc;
+                sprawdz();
+            });
+        });
+
+        zamowPrzycisk.forEach((przycisk, i) => {
+            przycisk.addEventListener('click', () => {
+                alert('Zamówienie nr: ' + idZamowienia + ' Produkt: ' + nazwaProduktow[i].innerHTML);
+                idZamowienia++;
+            });
+        });
+
+        sprawdz();
+    </script>
+</body>
+</html>

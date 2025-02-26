@@ -1,0 +1,46 @@
+body{
+    font-family: Verdana;
+    color: #2F2f2F;
+}
+.Pierwszy{
+    background-color: #DCDCDC;
+    width: 55%;
+    height: 80px;
+    text-align: center;
+}
+.Drugi,.Trzeci,.Czwarty{
+    background-color: #DCDCDC;
+    width: 15%;
+    height: 80px;
+}
+.Lewy{
+    background-color: #808080;
+    width: 30%;
+    height: 450px;
+}
+.Prawy{
+    background-color: #808080;
+    width: 70%;
+    height: 450px;
+}
+h5{
+    color:#808080 ;
+    border: solid 1px #808080;
+    padding: 7px;
+    margin: 10px;
+    font-size: 80%;
+}
+input{
+    color: grey;
+}
+header{
+    display: flex;
+}
+footer{
+    background-color: #DCDCDC;
+    text-align: center;
+    width: 100%;
+}
+main{
+    display: flex;
+}
